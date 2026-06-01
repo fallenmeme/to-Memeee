@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#1f1f23;
+    font-family:'Poppins',sans-serif;
+    padding:30px;
+}
+
+.container{
+    position:relative;
+    width:1000px;
+    min-height:900px;
+}
+
+/* Header */
+
+h1{
+    text-align:center;
+    color:white;
+    font-size:70px;
+    font-family:'Great Vibes',cursive;
+}
+
+h1 span{
+    color:#ff6fa7;
+}
+
+.subtitle{
+    text-align:center;
+    color:white;
+    margin-top:-5px;
+    font-size:24px;
+    font-family:'Great Vibes',cursive;
+}
+
+/* To Mom */
+
+.to-mom{
+    position:absolute;
+    right:60px;
+    top:120px;
+    color:#ff7db3;
+    font-family:'Great Vibes',cursive;
+    font-size:65px;
+    text-align:center;
+}
+
+/* Letter */
+
+.letter{
+    width:650px;
+    margin:80px auto;
+    background:white;
+    padding:50px;
+    border:4px solid #ff8fbe;
+    position:relative;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* Decorative corners */
+
+.letter::before,
+.letter::after{
+    content:"✿";
+    position:absolute;
+    color:#ff7db3;
+    font-size:28px;
+}
+
+.letter::before{
+    top:10px;
+    left:10px;
+}
+
+.letter::after{
+    top:10px;
+    right:10px;
+}
+
+.letter h2{
+    text-align:center;
+    font-family:'Great Vibes',cursive;
+    font-size:60px;
+    color:#d98ca7;
+    margin-bottom:30px;
+}
+
+.content{
+    font-size:18px;
+    line-height:2;
+    color:#222;
+}
+
+/* Envelopes */
+
+.envelope{
+    position:absolute;
+    width:220px;
+    height:150px;
+    background:#fff4f8;
+    border:2px solid #ffc1da;
+    box-shadow:0 6px 15px rgba(0,0,0,.15);
+}
+
+.envelope::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    border-left:110px solid transparent;
+    border-right:110px solid transparent;
+    border-top:75px solid #ffe0ec;
+}
+
+.envelope1{
+    right:60px;
+    top:300px;
+    transform:rotate(10deg);
+}
+
+.envelope2{
+    right:120px;
+    bottom:40px;
+    transform:rotate(-8deg);
+}
+
+/* Decorative doodles */
+
+.container::before{
+    content:"♡   ✿   ♡   ✿";
+    position:absolute;
+    left:20px;
+    top:120px;
+    color:#ff7db3;
+    font-size:28px;
+    writing-mode:vertical-rl;
+}
+
+.container::after{
+    content:"✿ ♡ ✿ ♡";
+    position:absolute;
+    right:10px;
+    top:50px;
+    color:#ff7db3;
+    font-size:28px;
+}
