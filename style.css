@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
-
 *{
     margin:0;
     padding:0;
@@ -7,150 +5,191 @@
 }
 
 body{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:#1f1f23;
-    font-family:'Poppins',sans-serif;
-    padding:30px;
+    background:#f7fbff;
+    color:#213547;
+    overflow-x:hidden;
+    font-family:'Cormorant Garamond',serif;
 }
 
-.container{
-    position:relative;
-    width:1000px;
-    min-height:900px;
+#particles{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-1;
 }
 
-/* Header */
-
-h1{
+.hero{
     text-align:center;
-    color:white;
-    font-size:70px;
-    font-family:'Great Vibes',cursive;
+    padding:100px 20px;
 }
 
-h1 span{
-    color:#ff6fa7;
+.hero h1{
+    font-size:6rem;
+    color:#4f7dbd;
+    font-family:'Great Vibes',cursive;
 }
 
 .subtitle{
-    text-align:center;
-    color:white;
-    margin-top:-5px;
-    font-size:24px;
-    font-family:'Great Vibes',cursive;
+    margin-top:15px;
+    font-size:1.3rem;
+    color:#6b8fbf;
 }
 
-/* To Mom */
-
-.to-mom{
-    position:absolute;
-    right:60px;
-    top:120px;
-    color:#ff7db3;
-    font-family:'Great Vibes',cursive;
-    font-size:65px;
-    text-align:center;
+.lace{
+    height:60px;
+    background:
+    repeating-linear-gradient(
+        45deg,
+        #bfd8ff,
+        #bfd8ff 10px,
+        white 10px,
+        white 20px
+    );
 }
 
-/* Letter */
-
-.letter{
-    width:650px;
-    margin:80px auto;
-    background:white;
+.scrapbook{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
     padding:50px;
-    border:4px solid #ff8fbe;
-    position:relative;
-    box-shadow:0 10px 25px rgba(0,0,0,.25);
 }
 
-/* Decorative corners */
-
-.letter::before,
-.letter::after{
-    content:"✿";
-    position:absolute;
-    color:#ff7db3;
-    font-size:28px;
+.polaroid{
+    width:320px;
+    background:white;
+    padding:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
-.letter::before{
-    top:10px;
-    left:10px;
+.polaroid img{
+    width:100%;
+    display:block;
 }
 
-.letter::after{
-    top:10px;
-    right:10px;
-}
-
-.letter h2{
+.polaroid p{
     text-align:center;
-    font-family:'Great Vibes',cursive;
-    font-size:60px;
-    color:#d98ca7;
-    margin-bottom:30px;
+    margin-top:15px;
+    font-size:1.2rem;
 }
 
-.content{
-    font-size:18px;
+.rotate-left{
+    transform:rotate(-5deg);
+}
+
+.rotate-right{
+    transform:rotate(5deg);
+}
+
+.letter-section{
+    padding:80px 20px;
+}
+
+.paper{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:60px;
+    border-radius:20px;
+    box-shadow:0 10px 40px rgba(0,0,0,.08);
+}
+
+.paper h2{
+    text-align:center;
+    color:#4f7dbd;
+    font-size:3rem;
+    margin-bottom:25px;
+}
+
+.paper p{
+    font-size:1.3rem;
     line-height:2;
-    color:#222;
+    margin-bottom:20px;
 }
 
-/* Envelopes */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    padding:50px;
+}
 
-.envelope{
+.photo-card{
+    background:white;
+    padding:10px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.photo-card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.quote-box{
+    text-align:center;
+    padding:120px 20px;
+}
+
+.quote-box h2{
+    font-size:4rem;
+    color:#4f7dbd;
+    font-family:'Great Vibes',cursive;
+}
+
+footer{
+    padding:100px 20px;
+    text-align:center;
+}
+
+footer h2{
+    color:#4f7dbd;
+    font-size:3rem;
+}
+
+footer p{
+    margin-top:10px;
+}
+
+.floating{
     position:absolute;
-    width:220px;
-    height:150px;
-    background:#fff4f8;
-    border:2px solid #ffc1da;
-    box-shadow:0 6px 15px rgba(0,0,0,.15);
+    color:#8ab4ff;
+    font-size:24px;
+    animation:float 12s linear infinite;
 }
 
-.envelope::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    border-left:110px solid transparent;
-    border-right:110px solid transparent;
-    border-top:75px solid #ffe0ec;
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
 }
 
-.envelope1{
-    right:60px;
-    top:300px;
-    transform:rotate(10deg);
+@media(max-width:768px){
+
+.hero h1{
+    font-size:4rem;
 }
 
-.envelope2{
-    right:120px;
-    bottom:40px;
-    transform:rotate(-8deg);
+.paper{
+    padding:30px;
 }
 
-/* Decorative doodles */
-
-.container::before{
-    content:"♡   ✿   ♡   ✿";
-    position:absolute;
-    left:20px;
-    top:120px;
-    color:#ff7db3;
-    font-size:28px;
-    writing-mode:vertical-rl;
+.paper p{
+    font-size:1.1rem;
 }
 
-.container::after{
-    content:"✿ ♡ ✿ ♡";
-    position:absolute;
-    right:10px;
-    top:50px;
-    color:#ff7db3;
-    font-size:28px;
+.quote-box h2{
+    font-size:3rem;
+}
+
 }
