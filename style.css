@@ -4,62 +4,117 @@
     box-sizing:border-box;
 }
 
-body{
-    background:#f7fbff;
-    color:#213547;
-    overflow-x:hidden;
-    font-family:'Cormorant Garamond',serif;
+html{
+    scroll-behavior:smooth;
 }
+
+body{
+    font-family:'Cormorant Garamond', serif;
+    background:#f6fbff;
+    color:#24374d;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* =====================
+   FLOATING BACKGROUND
+===================== */
 
 #particles{
     position:fixed;
     inset:0;
-    pointer-events:none;
     z-index:-1;
+    pointer-events:none;
 }
+
+/* =====================
+   TOP LACE
+===================== */
+
+.lace-top{
+    height:60px;
+
+    background:
+    repeating-linear-gradient(
+        45deg,
+        #a8cfff,
+        #a8cfff 12px,
+        white 12px,
+        white 24px
+    );
+
+    border-bottom:4px solid #8cbcff;
+}
+
+/* =====================
+   HERO
+===================== */
 
 .hero{
     text-align:center;
-    padding:100px 20px;
+    padding:90px 20px;
+}
+
+.date{
+    letter-spacing:4px;
+    color:#6f8fb8;
+    font-size:.9rem;
+    text-transform:uppercase;
 }
 
 .hero h1{
-    font-size:6rem;
-    color:#4f7dbd;
-    font-family:'Great Vibes',cursive;
+    font-family:'Great Vibes', cursive;
+    font-size:7rem;
+    color:#4d84d8;
+    margin-top:20px;
 }
 
 .subtitle{
     margin-top:15px;
+    color:#6b8ab6;
     font-size:1.3rem;
-    color:#6b8fbf;
 }
 
-.lace{
-    height:60px;
-    background:
-    repeating-linear-gradient(
-        45deg,
-        #bfd8ff,
-        #bfd8ff 10px,
-        white 10px,
-        white 20px
-    );
-}
+/* =====================
+   COLLAGE SECTION
+===================== */
 
-.scrapbook{
+.intro-collage{
+    max-width:1400px;
+    margin:auto;
+
     display:flex;
+    align-items:center;
     justify-content:center;
-    gap:40px;
     flex-wrap:wrap;
-    padding:50px;
+
+    gap:40px;
+    padding:40px;
+}
+
+.intro-text{
+    max-width:500px;
+    text-align:center;
+}
+
+.intro-text h2{
+    font-family:'Great Vibes', cursive;
+    color:#4d84d8;
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.intro-text p{
+    font-size:1.3rem;
+    line-height:1.8;
 }
 
 .polaroid{
     width:320px;
     background:white;
     padding:15px;
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+    border-radius:8px;
 }
 
 .polaroid img{
@@ -69,127 +124,319 @@ body{
 
 .polaroid p{
     text-align:center;
-    margin-top:15px;
+    margin-top:12px;
     font-size:1.2rem;
 }
 
-.rotate-left{
-    transform:rotate(-5deg);
+.left{
+    transform:rotate(-6deg);
 }
 
-.rotate-right{
-    transform:rotate(5deg);
+.right{
+    transform:rotate(6deg);
 }
 
-.letter-section{
-    padding:80px 20px;
+/* =====================
+   QUOTE
+===================== */
+
+.love-quote{
+    text-align:center;
+    padding:120px 20px;
+}
+
+.love-quote h2{
+    font-family:'Great Vibes', cursive;
+    color:#4d84d8;
+    font-size:5rem;
+}
+
+/* =====================
+   LETTER PAPER
+===================== */
+
+.letter-paper{
+    padding:70px 20px;
 }
 
 .paper{
+
     max-width:1000px;
     margin:auto;
+
     background:white;
-    padding:60px;
+
+    padding:70px;
+
     border-radius:20px;
-    box-shadow:0 10px 40px rgba(0,0,0,.08);
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.08);
+
+    position:relative;
+}
+
+.paper::before{
+    content:"💙";
+
+    position:absolute;
+    top:20px;
+    right:25px;
+
+    font-size:2rem;
 }
 
 .paper h2{
     text-align:center;
-    color:#4f7dbd;
-    font-size:3rem;
-    margin-bottom:25px;
+
+    color:#4d84d8;
+
+    font-family:'Great Vibes', cursive;
+
+    font-size:4rem;
+
+    margin-bottom:30px;
 }
 
 .paper p{
-    font-size:1.3rem;
+    font-size:1.35rem;
     line-height:2;
-    margin-bottom:20px;
+    margin-bottom:18px;
+}
+
+/* =====================
+   GALLERY
+===================== */
+
+.gallery-section{
+    padding:50px 20px;
 }
 
 .gallery{
+    max-width:1300px;
+    margin:auto;
+
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-    padding:50px;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
 }
 
 .photo-card{
     background:white;
     padding:10px;
     border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,.10);
+
+    transition:.4s;
+}
+
+.photo-card:hover{
+    transform:translateY(-8px);
 }
 
 .photo-card img{
     width:100%;
     border-radius:10px;
+    display:block;
+}
+
+/* =====================
+   BIG QUOTE
+===================== */
+
+.big-quote{
+    padding:130px 20px;
 }
 
 .quote-box{
     text-align:center;
-    padding:120px 20px;
 }
 
 .quote-box h2{
-    font-size:4rem;
-    color:#4f7dbd;
-    font-family:'Great Vibes',cursive;
+    font-family:'Great Vibes', cursive;
+    color:#4d84d8;
+    font-size:6rem;
 }
 
-footer{
-    padding:100px 20px;
+.quote-box p{
+    margin-top:10px;
+    font-size:1.3rem;
+}
+
+/* =====================
+   MEMORIES
+===================== */
+
+.memories{
+    padding:80px 20px;
+}
+
+.memories h2{
+    text-align:center;
+
+    font-family:'Great Vibes', cursive;
+
+    color:#4d84d8;
+
+    font-size:5rem;
+
+    margin-bottom:50px;
+}
+
+.memory-grid{
+    max-width:1300px;
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+}
+
+.memory-card{
+    background:white;
+    padding:12px;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,.08);
+
+    transition:.4s;
+}
+
+.memory-card:hover{
+    transform:scale(1.03);
+}
+
+.memory-card img{
+    width:100%;
+    display:block;
+    border-radius:10px;
+}
+
+/* =====================
+   ENDING
+===================== */
+
+.ending{
+    padding:80px 20px;
+}
+
+.final-paper{
     text-align:center;
 }
 
-footer h2{
-    color:#4f7dbd;
+.signature{
+    margin-top:50px;
+
+    font-family:'Great Vibes', cursive;
+
     font-size:3rem;
+
+    color:#4d84d8;
 }
 
-footer p{
-    margin-top:10px;
+/* =====================
+   FOOTER
+===================== */
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#6f8fb8;
 }
 
-.floating{
+/* =====================
+   FLOATING HEARTS
+===================== */
+
+.float-item{
     position:absolute;
-    color:#8ab4ff;
-    font-size:24px;
-    animation:float 12s linear infinite;
+    color:#7eb3ff;
+
+    animation:floatUp linear forwards;
+
+    opacity:.9;
 }
 
-@keyframes float{
+@keyframes floatUp{
+
     from{
-        transform:translateY(100vh);
+        transform:
+        translateY(100vh)
+        rotate(0deg);
+
         opacity:0;
     }
 
-    10%{
+    15%{
         opacity:1;
     }
 
-    100%{
-        transform:translateY(-120vh);
+    to{
+        transform:
+        translateY(-150vh)
+        rotate(360deg);
+
         opacity:0;
     }
 }
+
+/* =====================
+   REVEAL ANIMATION
+===================== */
+
+.reveal{
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =====================
+   MOBILE
+===================== */
 
 @media(max-width:768px){
 
 .hero h1{
-    font-size:4rem;
+    font-size:4.5rem;
+}
+
+.love-quote h2{
+    font-size:3rem;
 }
 
 .paper{
-    padding:30px;
+    padding:35px;
+}
+
+.paper h2{
+    font-size:3rem;
 }
 
 .paper p{
-    font-size:1.1rem;
+    font-size:1.15rem;
 }
 
 .quote-box h2{
-    font-size:3rem;
+    font-size:3.5rem;
+}
+
+.memories h2{
+    font-size:3.5rem;
 }
 
 }
